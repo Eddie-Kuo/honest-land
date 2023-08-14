@@ -7,7 +7,7 @@ interface HeaderProps {}
 
 export default function Header({}: HeaderProps) {
   return (
-    <nav className="fixed top-0 z-30 flex w-full items-center justify-between bg-yellow-200/30 px-3 py-2 ">
+    <nav className="fixed top-0 z-30 flex w-full max-w-6xl items-center justify-between px-3 py-4 md:px-10">
       <Link href="/" className="flex items-center gap-4">
         <Image
           src="/assets/sunflower.png"
@@ -15,7 +15,7 @@ export default function Header({}: HeaderProps) {
           height={100}
           alt="Logo"
         />
-        <p className="text-yl text-2xl font-light text-yellow-500 max-sm:hidden">
+        <p className=" text-2xl font-light tracking-widest text-yellow-500 max-sm:hidden">
           HONEST <br />
           LAND
         </p>
