@@ -11,7 +11,7 @@ export default function Home() {
           src="/assets/pexels-landscape.jpg"
           fill
           className="absolute overflow-y-hidden object-cover"
-          alt="Picture of land"
+          alt="Landing page bg-photo"
         />
       </div>
     </main>
