@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import Header from "@/components/Header";
 
 export default function Home() {
   const typingContainer = {
@@ -99,6 +100,7 @@ export default function Home() {
   return (
     <main>
       <div className="flex h-screen items-center justify-center">
+        <Header />
         <div className="z-10 flex flex-col items-center gap-2">
           {/* Welcome */}
           <motion.h1
