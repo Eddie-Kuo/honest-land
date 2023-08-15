@@ -9,7 +9,7 @@ export default function Home() {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.14,
+        staggerChildren: 0.15,
       },
     },
   };
@@ -20,6 +20,18 @@ export default function Home() {
       opacity: 1,
       y: "0",
       transition: {
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const smallText = {
+    hidden: { opacity: 0, y: "-20px" },
+    show: {
+      opacity: 1,
+      y: "0",
+      transition: {
+        delay: 1.5,
         ease: "easeInOut",
       },
     },
@@ -41,7 +53,15 @@ export default function Home() {
             ))}
           </motion.h1>
 
-          <p className="font-serif text-sm">to</p>
+          <motion.p
+            className="font-serif text-sm"
+            initial="hidden"
+            animate="show"
+            variants={smallText}
+          >
+            to
+          </motion.p>
+
           <h2 className="font-serif text-7xl">Honest Land</h2>
           <div className=" relative flex gap-3">
             <p>Integrity</p>
