@@ -37,7 +37,7 @@ export default function Home() {
 
           {/* Main Text */}
           <motion.h2
-            className="font-serif text-7xl"
+            className="text-center font-serif text-7xl"
             initial="hidden"
             animate="show"
             variants={framerVariants.mainText}

@@ -102,4 +102,16 @@ export const framerVariants = {
       transition: { duration: 0.5, delay: 1 },
     },
   },
+
+  collapsibleNavItem: {
+    hidden: { opacity: 0, y: "-20px" },
+    show: {
+      opacity: 1,
+      y: "0",
+      transition: {
+        delay: 0.75,
+        ease: "easeInOut",
+      },
+    },
+  },
 };
