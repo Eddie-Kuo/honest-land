@@ -20,7 +20,7 @@ export default function Header({}: HeaderProps) {
           LAND
         </p>
       </Link>
-      <div className="flex items-center gap-6 pr-2">
+      <div className="flex items-center gap-10 pr-2">
         <HeaderLink location={"/"} name="Home" />
         <HeaderLink location="/about" name="About" />
         <HeaderLink location="/contact" name="Contact" />

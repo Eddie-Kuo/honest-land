@@ -9,9 +9,11 @@ export default function Home() {
           <h1 className="font-serif text-6xl font-medium">Welcome</h1>
           <p className="font-serif text-sm">to</p>
           <h2 className="font-serif text-7xl">Honest Land</h2>
-          <div className=" flex gap-8">
+          <div className=" relative flex gap-3">
             <p>Integrity</p>
+            <div className="pt-1">*</div>
             <p>Transparency</p>
+            <div className="pt-1">*</div>
             <p>Respect</p>
           </div>
           <button className="mt-2 rounded-md bg-zinc-900 p-2 text-white">
