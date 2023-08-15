@@ -53,10 +53,41 @@ export default function Home() {
     },
   };
 
+  const valuesContainer = {
+    hidden: {
+      opacity: 0,
+      x: "-50px",
+    },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        staggerChildren: 0.3,
+        delayChildren: 2.5,
+      },
+    },
+  };
+
+  const valueItem = {
+    hidden: {
+      opacity: 0,
+      x: "-30px",
+    },
+    show: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 0.15,
+        ease: "easeIn",
+      },
+    },
+  };
+
   return (
     <main>
       <div className="flex h-screen items-center justify-center">
         <div className="z-10 flex flex-col items-center gap-2">
+          {/* Welcome */}
           <motion.h1
             className="font-serif text-6xl font-medium"
             initial="hidden"
@@ -70,6 +101,7 @@ export default function Home() {
             ))}
           </motion.h1>
 
+          {/* to */}
           <motion.p
             className="font-serif text-sm"
             initial="hidden"
@@ -79,6 +111,7 @@ export default function Home() {
             to
           </motion.p>
 
+          {/* Main Text */}
           <motion.h2
             className="font-serif text-7xl"
             initial="hidden"
@@ -87,13 +120,26 @@ export default function Home() {
           >
             Honest Land
           </motion.h2>
-          <div className=" relative flex gap-3">
-            <p>Integrity</p>
-            <div className="pt-1">*</div>
-            <p>Transparency</p>
-            <div className="pt-1">*</div>
-            <p>Respect</p>
-          </div>
+
+          {/* Values */}
+          <motion.div
+            className=" relative flex gap-3"
+            initial="hidden"
+            animate="show"
+            variants={valuesContainer}
+          >
+            <motion.p variants={valueItem}>Integrity</motion.p>
+            <motion.div className="pt-1" variants={valueItem}>
+              *
+            </motion.div>
+            <motion.p variants={valueItem}>Transparency</motion.p>
+            <motion.div className="pt-1" variants={valueItem}>
+              *
+            </motion.div>
+            <motion.p variants={valueItem}>Respect</motion.p>
+          </motion.div>
+
+          {/* Submit Button */}
           <button className="mt-2 rounded-md bg-zinc-900 p-2 text-white">
             Sell us Your Land
           </button>
