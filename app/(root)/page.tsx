@@ -1,12 +1,46 @@
-import Header from "@/components/Header";
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Home() {
+  const typingContainer = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.14,
+      },
+    },
+  };
+
+  const typingText = {
+    hidden: { opacity: 0, y: "-20px" },
+    show: {
+      opacity: 1,
+      y: "0",
+      transition: {
+        ease: "easeInOut",
+      },
+    },
+  };
   return (
     <main>
       <div className="flex h-screen items-center justify-center">
         <div className="z-10 flex flex-col items-center gap-2">
-          <h1 className="font-serif text-6xl font-medium">Welcome</h1>
+          <motion.h1
+            className="font-serif text-6xl font-medium"
+            initial="hidden"
+            animate="show"
+            variants={typingContainer}
+          >
+            {Array.from("Welcome").map((letter, index) => (
+              <motion.span key={index} variants={typingText}>
+                {letter}
+              </motion.span>
+            ))}
+          </motion.h1>
+
           <p className="font-serif text-sm">to</p>
           <h2 className="font-serif text-7xl">Honest Land</h2>
           <div className=" relative flex gap-3">
