@@ -4,8 +4,7 @@ import Image from "next/image";
 export default function Home() {
   return (
     <main>
-      <div className="flex h-screen items-center justify-center bg-yellow-200/90">
-        <Header />
+      <div className="flex h-screen items-center justify-center">
         <h2 className="z-10">Hello World</h2>
         <Image
           src="/assets/pexels-landscape.jpg"
