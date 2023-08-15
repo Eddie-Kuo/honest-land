@@ -83,6 +83,19 @@ export default function Home() {
     },
   };
 
+  const buttonAnimation = {
+    hidden: { opacity: 0, scaleX: 0.5 },
+    show: {
+      opacity: 1,
+      scaleX: 1,
+      transition: {
+        duration: 0.3,
+        delay: 2.8,
+        type: "tween",
+      },
+    },
+  };
+
   return (
     <main>
       <div className="flex h-screen items-center justify-center">
@@ -140,9 +153,14 @@ export default function Home() {
           </motion.div>
 
           {/* Submit Button */}
-          <button className="mt-2 rounded-md bg-zinc-900 p-2 text-white">
+          <motion.button
+            className="mt-2 rounded-md bg-zinc-900 p-2 text-white"
+            initial="hidden"
+            animate="show"
+            variants={buttonAnimation}
+          >
             Sell us Your Land
-          </button>
+          </motion.button>
         </div>
         <Image
           src="/assets/pexels-landscape.jpg"
