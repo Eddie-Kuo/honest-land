@@ -110,7 +110,8 @@ export const framerVariants = {
       y: "0",
       transition: {
         delay: 0.75,
-        ease: "easeInOut",
+        duration: 0.3,
+        ease: "easeIn",
       },
     },
   },

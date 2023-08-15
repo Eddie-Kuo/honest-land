@@ -6,7 +6,6 @@ import { motion } from "framer-motion";
 import { framerVariants } from "@/constants/variants";
 import { useState } from "react";
 import MenuToggle from "./MenuToggle";
-import AnimatedNav from "./AnimatedNav";
 
 interface HeaderProps {}
 
@@ -60,9 +59,21 @@ export default function Header({}: HeaderProps) {
           className="absolute right-0 top-0 flex h-[1000px] w-[300px] justify-center bg-white/90 pt-32"
         >
           <div className="flex flex-col items-center gap-10">
-            <AnimatedNav location="/" name="Home" />
-            <AnimatedNav location="/about" name="About" />
-            <AnimatedNav location="/contact" name="Contact" />
+            <HeaderLink
+              variant={framerVariants.collapsibleNavItem}
+              location="/"
+              name="Home"
+            />
+            <HeaderLink
+              variant={framerVariants.collapsibleNavItem}
+              location="/about"
+              name="About"
+            />
+            <HeaderLink
+              variant={framerVariants.collapsibleNavItem}
+              location="/contact"
+              name="Contact"
+            />
           </div>
         </motion.div>
       )}
