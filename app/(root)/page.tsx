@@ -36,6 +36,23 @@ export default function Home() {
       },
     },
   };
+
+  const mainText = {
+    hidden: {
+      opacity: 0,
+      y: "50px",
+    },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        delay: 2.0,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
     <main>
       <div className="flex h-screen items-center justify-center">
@@ -62,7 +79,14 @@ export default function Home() {
             to
           </motion.p>
 
-          <h2 className="font-serif text-7xl">Honest Land</h2>
+          <motion.h2
+            className="font-serif text-7xl"
+            initial="hidden"
+            animate="show"
+            variants={mainText}
+          >
+            Honest Land
+          </motion.h2>
           <div className=" relative flex gap-3">
             <p>Integrity</p>
             <div className="pt-1">*</div>
