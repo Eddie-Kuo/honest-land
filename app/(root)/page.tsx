@@ -72,7 +72,7 @@ export default function Home() {
             animate="show"
             variants={framerVariants.buttonAnimation}
           >
-            Sell us Your Land
+            Sell Us Your Land
           </motion.button>
         </div>
         <Image
