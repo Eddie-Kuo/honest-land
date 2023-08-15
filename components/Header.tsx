@@ -8,8 +8,22 @@ interface HeaderProps {}
 
 export default function Header({}: HeaderProps) {
   const headerLeft = {
-    hidden: { x: -500, opacity: 0, scale: 0.5 },
-    show: { x: 0, opacity: 1, scale: 1, transition: { duration: 1.5 } },
+    hidden: { x: -100, opacity: 0, scale: 0.75 },
+    show: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, delay: 1 },
+    },
+  };
+  const headerRight = {
+    hidden: { x: 100, opacity: 0, scale: 0.75 },
+    show: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5, delay: 1 },
+    },
   };
 
   return (
@@ -28,11 +42,16 @@ export default function Header({}: HeaderProps) {
           </p>
         </Link>
       </motion.div>
-      <div className="flex items-center gap-10 pr-2">
+      <motion.div
+        className="flex items-center gap-10 pr-2"
+        initial="hidden"
+        animate="show"
+        variants={headerRight}
+      >
         <HeaderLink location={"/"} name="Home" />
         <HeaderLink location="/about" name="About" />
         <HeaderLink location="/contact" name="Contact" />
-      </div>
+      </motion.div>
     </nav>
   );
 }
