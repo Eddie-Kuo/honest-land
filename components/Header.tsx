@@ -7,7 +7,7 @@ interface HeaderProps {}
 
 export default function Header({}: HeaderProps) {
   return (
-    <nav className="fixed top-0 z-30 flex w-full max-w-6xl items-center justify-between px-3 py-2 md:px-10">
+    <nav className="fixed top-0 z-30 flex w-full items-center justify-between py-2 md:px-10">
       <Link href="/" className="flex items-center gap-4">
         <Image
           src="/assets/sunflower.png"
