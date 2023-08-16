@@ -26,7 +26,7 @@ export default function HeaderLink({
         {name}
         <span
           className={`ease absolute -bottom-0.5 left-0 inline-block h-[1.5px] bg-zinc-900 transition-[width] duration-200 group-hover:w-full
-        ${pathname === location ? "w-full" : "w-0"}`}
+        ${pathname === location && name === "Home" ? "w-full" : "w-0"}`}
         >
           &nbsp;
         </span>

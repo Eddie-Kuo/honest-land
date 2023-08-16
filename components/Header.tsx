@@ -39,8 +39,8 @@ export default function Header({}: HeaderProps) {
         variants={framerVariants.headerRight}
       >
         <HeaderLink location="/" name="Home" />
-        <HeaderLink location="/about" name="About" />
-        <HeaderLink location="/contact" name="Contact" />
+        <HeaderLink location="/" name="About" />
+        <HeaderLink location="/" name="Contact" />
       </motion.div>
 
       {/* mobile nav menu */}
@@ -56,7 +56,7 @@ export default function Header({}: HeaderProps) {
             y: "-100%",
           }}
           transition={{ type: "spring", bounce: 0, duration: 1 }}
-          className="absolute right-0 top-0 flex h-[1000px] w-[300px] justify-center bg-white/90 pt-32"
+          className="absolute right-0 top-0 flex h-[100000px] w-[300px] justify-center bg-white/90 pt-32"
         >
           <div className="flex flex-col items-center gap-10">
             <HeaderLink
@@ -66,12 +66,12 @@ export default function Header({}: HeaderProps) {
             />
             <HeaderLink
               variant={framerVariants.collapsibleNavItem}
-              location="/about"
+              location="/"
               name="About"
             />
             <HeaderLink
               variant={framerVariants.collapsibleNavItem}
-              location="/contact"
+              location="/"
               name="Contact"
             />
           </div>
