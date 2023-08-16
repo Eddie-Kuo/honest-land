@@ -18,7 +18,7 @@ export default function HeaderLink({
   const pathname = usePathname();
 
   return (
-    <motion.div initial="hidden" animate="show" variants={variant}>
+    <motion.div variants={variant}>
       <Link
         href={location}
         className="group relative text-xl font-light tracking-wide text-zinc-800"

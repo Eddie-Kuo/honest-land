@@ -46,19 +46,27 @@ export default function Header({}: HeaderProps) {
       {/* mobile nav menu */}
       {isOpen && (
         <motion.div
-          initial={{ x: "100%", y: "-100%" }}
+          initial={{ x: "100%" }}
           animate={{
             x: 0,
             y: 0,
           }}
           exit={{
             x: "100%",
-            y: "-100%",
           }}
-          transition={{ type: "spring", bounce: 0, duration: 1 }}
+          transition={{
+            type: "spring",
+            bounce: 0,
+            duration: 1,
+          }}
           className="absolute right-0 top-0 flex h-[100000px] w-[300px] justify-center bg-white/90 pt-32 sm:hidden"
         >
-          <div className="flex flex-col items-center gap-10">
+          <motion.div
+            className="flex flex-col items-center gap-10"
+            initial="hidden"
+            animate="show"
+            variants={framerVariants.valuesContainer}
+          >
             <HeaderLink
               variant={framerVariants.collapsibleNavItem}
               location="/"
@@ -74,7 +82,7 @@ export default function Header({}: HeaderProps) {
               location="/"
               name="Contact"
             />
-          </div>
+          </motion.div>
         </motion.div>
       )}
       <MenuToggle toggle={() => setIsOpen(!isOpen)} openMenu={isOpen} />
