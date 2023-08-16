@@ -56,7 +56,7 @@ export default function Header({}: HeaderProps) {
             y: "-100%",
           }}
           transition={{ type: "spring", bounce: 0, duration: 1 }}
-          className="absolute right-0 top-0 flex h-[100000px] w-[300px] justify-center bg-white/90 pt-32"
+          className="absolute right-0 top-0 flex h-[100000px] w-[300px] justify-center bg-white/90 pt-32 sm:hidden"
         >
           <div className="flex flex-col items-center gap-10">
             <HeaderLink
