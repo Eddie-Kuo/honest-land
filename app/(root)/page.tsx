@@ -80,6 +80,7 @@ export default function Home() {
           fill
           className="absolute overflow-y-hidden object-cover"
           alt="Landing page bg-photo"
+          priority={true}
         />
       </div>
     </main>
